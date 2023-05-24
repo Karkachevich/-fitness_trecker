@@ -2,7 +2,7 @@ from training import Training
 
 
 class SportsWalking(Training):
-    """Тренировка: спортивная ходьба."""
+    """Класс тренировки: Спортивная ходьба."""
     CALORIES_MEAN_SPEED_MULTIPLIER: int = 0.035
     CALORIES_MEAN_SPEED_SHIFT: int = 0.029
     M_IN_SM: int = 100  # Константа для перевода из метров в сантиметры
