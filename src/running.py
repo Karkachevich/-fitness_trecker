@@ -3,6 +3,7 @@ from typing import ClassVar
 
 from training import Training
 
+
 @dataclass
 class Running(Training):
     """Класс тренировки: Бег."""
@@ -16,4 +17,3 @@ class Running(Training):
                  + self.CALORIES_MEAN_SPEED_SHIFT)
                 * self.weight / self.M_IN_KM
                 * (self.duration * self.H_IN_M))
-    
