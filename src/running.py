@@ -1,10 +1,13 @@
+from dataclasses import dataclass
+from typing import ClassVar
+
 from training import Training
 
-
+@dataclass
 class Running(Training):
     """Класс тренировки: Бег."""
-    CALORIES_MEAN_SPEED_MULTIPLIER: int = 18
-    CALORIES_MEAN_SPEED_SHIFT: int = 1.79
+    CALORIES_MEAN_SPEED_MULTIPLIER: ClassVar[int] = 18
+    CALORIES_MEAN_SPEED_SHIFT: ClassVar[int] = 1.79
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
