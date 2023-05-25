@@ -1,20 +1,19 @@
+from dataclasses import dataclass
+from typing import ClassVar
+
 from message import InfoMessage
 
 
+@dataclass
 class Training:
     """Базовый класс тренировки."""
-    H_IN_M: int = 60
-    M_IN_KM: int = 1000
-    LEN_STEP: float = 0.65
+    H_IN_M: ClassVar[int] = 60
+    M_IN_KM: ClassVar[int] = 1000
+    LEN_STEP: ClassVar[float] = 0.65
 
-    def __init__(self,
-                 action: int,
-                 duration: float,
-                 weight: float,
-                 ) -> None:
-        self.action = action  # количество совершённых действий
-        self.duration = duration  # длительность тренировки
-        self.weight = weight  # вес спортсмена
+    action: int  # количество совершённых действий
+    duration: float  # длительность тренировки
+    weight: float  # вес спортсмена
 
     def get_distance(self) -> float:
         """Получить дистанцию в км."""
